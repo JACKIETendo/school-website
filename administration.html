@@ -121,47 +121,104 @@
           transform: scale(1.1);
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
       }
+      /* Header */
+      #topHeader {
+        background-color: rgba(0, 128, 0, 0.9);
+        color: white;
+        padding: 10px 20px;
+        font-size: 14px;
+        z-index: 1050;
+        }
+
+        /* Navbar */
+        #mainNavbar {
+        box-shadow: none;
+        }
+
+        #mainNavbar.scrolled {
+        transform: translateY(-50%);
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Links and Button */
+        .navbar-nav .nav-link {
+        color: black;
+        transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+        color: orange;
+        }
+
+        .btn-m {
+        font-size: 14px;
+        padding: 5px 15px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+        #topHeader {
+            flex-wrap: wrap;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .header-left,
+        .header-right {
+            flex: 1 1 100%;
+            text-align: center;
+        }
+
+        .navbar-brand {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 14px;
+        }
+
+        .btn-m {
+            padding: 5px 10px;
+        }
+        }
              
 
     </style>
 </head>
 <body>
-  <section id="topHeader" class="header navbar navbar-expand-lg shadow-sm sticky-top" style="position: fixed; top: 0; width: 100%; z-index: 1030; background: rgba(0, 128, 0, 0.9); padding: 5px; padding-left: 5px;">
-    <div class="header navbar navbar-expand-lg shadow-sm sticky-top">
-      <div class="container-fluid">
-        <!-- Top Row -->
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-          <!-- Contact Info -->
-          <div class="d-flex flex-column text-center text-md-start mb-2 mb-md-0">
-            <span class="d-block"><i class="bi bi-envelope-open me-1"></i>shilo@shilonilestar.com</span>
-            <span class="d-block"><i class="bi bi-envelope-open me-1"></i>P.O.Box 1838</span>
-            <span class="d-block"><i class="bi bi-telephone-fill me-1"></i> 0394813636 / 0772423201</span>
-          </div>
-        </div>
-        <!-- Links Row -->
-        <div class="d-lg-flex justify-content-center mt-3">
-          <ul class="list-inline mb-0 text-center text-lg-start">
+  <header id="topHeader" class="header navbar navbar-expand-lg shadow-sm sticky-top sticky-top" style="transition: transform 0.3s ease-in-out;">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Left Section -->
+      <div class="header-left d-flex flex-column">
+        <span><i class="bi bi-envelope-open me-1"></i>shilo@shilonilestar.com <span style="font-weight: bold;">P.O.Box 1838</span></span>
+      </div>
+  
+      <!-- Right Section -->
+      <div class="header-right d-flex align-items-center">
+        <div class="social-icons ms-3">
             <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">Administration</a></li>
-            <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">School Circular</a></li>
             <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">School Fees</a></li>
             <li class="list-inline-item me-3"><a href="#" class="text-light text-decoration-none">Apply Online</a></li>
-          </ul>
+            <a href="#" class="me-3"><i class="bi bi-envelope-check-fill text-white"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook text-white"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-person-circle text-white"></i></a>
         </div>
-         <!-- Social Media Icons -->
-         <div class=" align-items-center mt-2 mt-md-0" style="color: white; font-size: 17px;">
-            <a href="#" class="me-3"><i class="bi bi-envelope-check-fill" style="color: white;"></i></a>
-            <a href="#" class="me-3"><i class="bi bi-facebook" style="color: white;"></i></a>
-            <a href="#" class="me-3"><i class="bi bi-person-circle" style="color: white;"></i></a>
-          </div>
       </div>
     </div>
-  </section>
+  </header>
   
   <!-- Navbar -->
-<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light shadow ml-3 mr-3" style="position: fixed; top: 72px; width: 100%; z-index: 1050; background: white; transition: background-color 0.3s, box-shadow 0.3s;">
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light shadow sticky-top" style="position: fixed; width: 100%; z-index: 1050; background: white; transition: background-color 0.3s, box-shadow 0.3s;">
   <div class="container">
     <img src="assets/download (1).jpeg" alt="" style="height: 60px; width: 60px;">
-    <a class="navbar-brand" href="#" style="font-weight: bold;">Shilo Nile Star <br> Nursery & Primary School</a>
+    <a class="navbar-brand" href="#" style="font-weight: bold;">Shilo Nile Star <br>  Nursery & Primary School</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
