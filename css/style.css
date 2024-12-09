@@ -1,5 +1,8 @@
 html{
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 body {
@@ -8,6 +11,9 @@ body {
     line-height: 1.6;
     background-color: #f0f8ff; /* Light blue background */
     color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 h1, h2, h3 {
@@ -29,58 +35,32 @@ footer {
     background-color: #333;
     color: #fff;
 }
-
-.header{
-    color: white;
-    padding: 0.5px;
-    font-size: 14px;
-}
-.header i{
-    padding: 15px;
-}
-
-.header ul {
-    padding: 0;
-    margin: 0;
-}
-
-.header ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px;
-}
-
-.header ul li a {
-    transition: color 0.3s;
-}
-
-.header ul li a:hover {
-    color: orange;
-}
-
-@media (max-width: 768px) {
-    .header ul {
-        display: inline-block;
-    }
-    .header ul li a i{
-        text-align: center;
-    }
-    .header{
-        color: white;
-        padding: 0;
-        font-size: 14px;
-        margin-top: 0;
-    }
-}
-  
-
-/* Navbar Style */
+/* Navbar and header Style */
 .navbar {
     z-index: 1030; /* Ensures it stacks above other content */
     position: relative; /* Ensures z-index is applied properly */
 }
-/* Dropdown Menu Styles */
+#topHeader {
+    background-color: rgba(0, 128, 0, 0.3);
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
+}
 
+.header-left span {
+    margin-bottom: 2px;
+}
+
+.header-right a {
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.header-right a:hover {
+    color: orange;
+}
 .dropdown-menu{
     background-color: white;
     border-radius: 8px;
@@ -95,16 +75,6 @@ footer {
     transform: scaleY(1);
     opacity: 1;
 }
-
-  /* Dropdown Item Styles */
-.dropdown-item {
-    padding: 5px 10px;
-    font-size: 14px;
-    color: #333; /* Text color */
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-}
-
 .dropdown-item:hover {
     background-color: orange; /* Highlight color */
     color: white; /* Text color on hover */
@@ -116,32 +86,14 @@ footer {
     margin: 8px 0;
 }
 
-/* Ensure Toggler is Properly Aligned */
-.navbar-toggler {
-    margin: 0; /* Remove any unwanted margin */
-    padding: 0.25rem 0.5rem; /* Adjust padding for better fit */
-    float: right; /* Align toggler to the right */
-    border: none; /* Optional: Remove border if not needed */
+    /* Dropdown Item Styles */
+.dropdown-item {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333; /* Text color */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
 }
-
-/* Fix Extra Space on Small Screens */
-@media (max-width: 768px) {
-    .navbar {
-        padding-right: 0; /* Remove extra padding */
-        padding-left: 0; /* Remove extra padding */
-    }
-
-    .navbar-toggler {
-        float: none; /* Reset float */
-        display: block; /* Ensure proper alignment */
-    }
-
-    .container {
-        max-width: 100%; /* Prevent horizontal overflow */
-        padding: 0; /* Reset padding for container */
-    }
-}
-
 /* General Navbar Link Styling */
 .navbar-nav .nav-link {
     color: green !important;
@@ -159,14 +111,21 @@ footer {
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 5px;
 }
+/* Ensure Toggler is Properly Aligned */
+.navbar-toggler {
+    margin: 0; /* Remove any unwanted margin */
+    padding: 0.25rem 0.5rem; /* Adjust padding for better fit */
+    float: right; /* Align toggler to the right */
+    border: none; /* Optional: Remove border if not needed */
+}
 
 /* Navbar Background and Shadow on Scroll */
 #mainNavbar {
     background-color: white;
     box-shadow: none;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     position: fixed;
-    top: 72px; /* adjust based on your layout */
+    top: 45px; /* adjust based on your layout */
     z-index: 1050; /* Ensure this is higher than other elements */
 }
 #mainNavbar.scrolled {
@@ -174,6 +133,49 @@ footer {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
     transition: background-color 0.3s, box-shadow 0.3s;
 }
+/* Media navbar Queries */
+@media (max-width: 768px) {
+    #topHeader {
+        flex-wrap: wrap;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .header-left,
+    .header-right {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    .btn-m {
+        padding: 5px 10px;
+    }
+    #topHeader, #mainNavbar {
+        margin: 0; /* Ensure no unwanted margins */
+        padding: 0; /* Reset default padding */
+    }
+    .navbar, .container {
+        max-width: 100%;
+        width: 100%; /* Ensure the navbar doesn't extend beyond the viewport */
+    }
+    
+    
+}
+
+/* Scroll Behavior */
+.hidden {
+    transform: translateY(-50%);
+  }
+
 
 
 .scrolled {
@@ -196,6 +198,7 @@ footer {
 .rotate:hover{
     transform: rotate();
 }
+
 
 /* Button styling */
 .btn-warning {
@@ -559,7 +562,7 @@ footer a:hover {
  @media (max-width: 768px) {
     #mainNavbar {
         padding: 10px 10px; /* Increase padding */
-        margin-top: 120px;
+        margin-top: 25px auto;
     }
 
     .navbar-brand {

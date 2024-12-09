@@ -56,3 +56,22 @@ backToTopButton.onclick = function () {
     });
 };
 
+let lastScrollTop = 0;
+const topHeader = document.getElementById("topHeader");
+const mainNavbar = document.getElementById("mainNavbar");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scroll Down
+    topHeader.classList.add("hidden");
+    mainNavbar.classList.add("hidden");
+  } else {
+    // Scroll Up
+    topHeader.classList.remove("hidden");
+    mainNavbar.classList.remove("hidden");
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
+});
