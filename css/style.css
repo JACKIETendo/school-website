@@ -41,7 +41,7 @@ footer {
     position: relative; /* Ensures z-index is applied properly */
 }
 #topHeader {
-    background-color: rgba(0, 128, 0, 0.3);
+    background-color: rgba(2, 102, 2, 0.3);
     color: white;
     padding: 10px 20px;
     font-size: 14px;
@@ -148,8 +148,7 @@ footer {
     }
 
     .navbar-brand {
-        text-align: center;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .navbar-nav .nav-link {
