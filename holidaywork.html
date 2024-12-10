@@ -94,27 +94,34 @@
             background: rgba(0, 128, 0, 0.6); /* Green overlay */
             z-index: 1;
         }
+        .card-title{
+            color: orange;
+            font-weight: bold;
+        }
+        .card-text{
+            color: green;
+        }
         .whatsapp-icon {
-          position: fixed;
-          bottom: 20px;
-          left: 20px;
-          z-index: 1000;
-      }
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
 
-      .whatsapp-icon img {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
+        .whatsapp-icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-      .whatsapp-icon img:hover {
-          transform: scale(1.1);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-      }
-      /* Header */
-      #topHeader {
+        .whatsapp-icon img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        /* Header */
+        #topHeader {
         background-color: rgba(0, 128, 0, 0.9);
         color: white;
         padding: 10px 20px;
@@ -179,6 +186,43 @@
             padding: 5px 10px;
         }
         }
+        @media (max-width: 768px){
+            .content-section {
+            margin: auto;
+        }
+
+        }
+
+        .content-section {
+            margin: 40px 10%;
+        }
+        @media (max-width: 576px) { /* Target small screens (576px and below) */
+            .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            padding-bottom: 20px;
+        }
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-download {
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px;
+        }
+
+        .btn-download:hover {
+            background-color: green;
+            color: white;
+        }
+        
+
              
 
     </style>
@@ -253,7 +297,7 @@
             <li><a class="dropdown-item" href="primary.html">Primary</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="schoolcircular.html">School Circular</a></li>
-            <li><a class="dropdown-item" href="holidaywork.html">Holiday Work</a></li>
+            <li><a class="dropdown-item" href="#">Holiday Work</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -289,30 +333,70 @@
   <section id="aboutUs" class="about-us">
     <div class="container-fluid">
       <div class="section-header">
-        <h2 class="section-title" data-aos="flip-down" data-aos-delay="200" data-aos-duration="1000">Head Teacher's Message</h2>
+        <h2 class="section-title" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1000">Holiday Work</h2>
       </div>
-      <div class="row">
-        <div class="col-sm-6" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/download (1).jpeg" alt="" style="height: 320px; width: 600px;align-items: center;">
-              <p style="color: green;"> <span style="font-size: 30px; color: orange; font-weight: bold;">Mr.Ssentubwe Fredrick</span><br> <br>
-                I sincerely welcome you to our website, and I thank the Almighty God, who has sustained our lives and blessed us in all aspects. I thank all the parents who have entrusted us with their children, and we thank you for your endless spiritual, financial, and moral support and love for Lakeside College Luzira. May God continue to bless you in all your endeavors</p>
+      <div class="overlay">
+        <!-- Hero Section -->
+        <section class="hero-section" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+            <h1 style="color: orange; font-weight: bold; text-shadow: 2px 2px #4caf50; text-align: center;">Download Holiday Work</h1>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section" id="nursery" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-3 text-center">
+                        <h5 class="card-title">Nursery Class A</h5>
+                        <p class="card-text">Download holiday work for Nursery Class A.</p>
+                        <button class="btn btn-download" onclick="downloadWork('nursery-a.pdf')">Download</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 text-center">
+                        <h5 class="card-title">Nursery Class B</h5>
+                        <p class="card-text">Download holiday work for Nursery Class B.</p>
+                        <button class="btn btn-download" onclick="downloadWork('nursery-b.pdf')">Download</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 text-center">
+                        <h5 class="card-title">Nursery Class B</h5>
+                        <p class="card-text">Download holiday work for Nursery Class B.</p>
+                        <button class="btn btn-download" onclick="downloadWork('nursery-b.pdf')">Download</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-sm-6" data-aos="fade-down-left" data-aos-delay="200" data-aos-duration="1000">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title" style="color: orange; font-weight: bold;">Our Philosophy of education</h5>
-              <p class="card-text" style="color: green;">Shilo Nile Star Nursery & Primary School is a school and so it subscribes to the Adventist Philosophy of Education. Adventist Education seeks to impart far more than academic knowledge. It seeks to develop a life of faith in God and respect for all human beings; to build character akin to that acts as a reflector of others thoughts, to promote loving service rather than selfish ambition; to ensure maximum development of each individual’s potential; and to embrace all that is true, good and beautiful.</p>
-              <p class="card-text" style="color: green;">Education is the great engine of personal development. It is through education that the daughter of a peasant can become a doctor, that the son of a mine worker can become the head of the mine, and that the child of a farm worker can become the president of a great nation. It is what we make out of what we have, not what we are given, that separates one person from another.</p>
+        </section>
+
+        <section class="content-section" id="primary" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-3 text-center">
+                        <h5 class="card-title">Primary One</h5>
+                        <p class="card-text">Download holiday work for Primary One.</p>
+                        <button class="btn btn-download" onclick="downloadWork('primary-one.pdf')">Download</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 text-center">
+                        <h5 class="card-title">Primary Two</h5>
+                        <p class="card-text">Download holiday work for Primary Two.</p>
+                        <button class="btn btn-download" onclick="downloadWork('primary-two.pdf')">Download</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 text-center">
+                        <h5 class="card-title">Primary Two</h5>
+                        <p class="card-text">Download holiday work for Primary Two.</p>
+                        <button class="btn btn-download" onclick="downloadWork('primary-two.pdf')">Download</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   </section>
+  
 
 
   <!-- Footer Section -->

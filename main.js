@@ -75,3 +75,10 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
 });
+
+
+function downloadWork(fileName) {
+    alert(`Starting download for ${fileName}`);
+    // Simulate download (replace with actual file link)
+    window.location.href = `files/${fileName}`;
+}
