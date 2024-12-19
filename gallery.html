@@ -94,52 +94,51 @@
             background: rgba(0, 128, 0, 0.6); /* Green overlay */
             z-index: 1;
         }
-        .card-title{
-            color: orange;
-            font-weight: bold;
-        }
-        .card-text{
-            color: green;
-        }
-        .anthem-title {
-            font-size: 2.5rem;
-            font-weight: bold;
+        .gallery-header {
+            background-color: green;
             color: white;
-            margin-bottom: 10px;
-        }
-
-        .anthem-intro {
-            font-size: 1.1rem;
-            color: white;
-            margin-bottom: 20px;
+            padding: 20px;
             text-align: center;
         }
 
-        .anthem-box {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .anthem-lyrics {
-            font-size: 1.2rem;
-            color: green;
-            line-height: 1.8;
-        }
-
-        .anthem-button {
+        .btn-group .btn {
             background-color: orange;
-            color: #fff;
-            font-size: 1rem;
-            padding: 10px 20px;
+            color: white;
             border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            margin: 5px;
         }
 
-        .anthem-button:hover {
+        .btn-group .btn:hover {
             background-color: green;
+            color: white;
+        }
+
+        .gallery-section {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .gallery-section.active {
+            display: block;
+        }
+
+        .gallery-section h2 {
+            color: green;
+            font-weight: bold;
+        }
+
+        .gallery-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .gallery-section img:hover {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
         }
         .whatsapp-icon {
             position: fixed;
@@ -312,11 +311,11 @@
             Students
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">School Life</a></li>
-            <li><a class="dropdown-item" href="#">Our Facilities</a></li>
+            <li><a class="dropdown-item" href="schoollife.html">School Life</a></li>
+            <li><a class="dropdown-item" href="ourfacilities.html">Our Facilities</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Photo Gallery</a></li>
-            <li><a class="dropdown-item" href="#">Prefects</a></li>
+            <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
+            <li><a class="dropdown-item" href="prefects.html">Prefects</a></li>
             <li><a class="dropdown-item" href="#">Alumni</a></li>
           </ul>
         </li>
@@ -338,35 +337,139 @@
   <section id="aboutUs" class="about-us">
     <div class="container-fluid">
       <div class="section-header">
-        <h2 class="section-title" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1000">Our School Anthem</h2>
+        <h2 class="section-title" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1000">Gallery</h2>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-lg-8" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
-            <p style="color: orange; text-align: center; font-weight: bold;">A song of pride, unity, and inspiration for our school community.</p>
-            <div class="anthem-box p-4">
-                <p class="anthem-lyrics">
-
-                    <strong>Verse 1:</strong><br>
-                    [Insert the first stanza of your school anthem here...]<br><br>
-
-                    <strong>Chorus:</strong><br>
-                    [Insert the chorus of your school anthem here...]<br><br>
-
-                    <strong>Verse 2:</strong><br>
-                    [Insert the second stanza of your school anthem here...]
-                </p>
-                <div class="text-center mt-4">
-                  <a href="./assets/ANDY_BUMUNTU_-_ON_FIRE__OFFICIAL_VIDEO_(256k).mp3"><button class="btn btn-primary anthem-button">Listen to the Anthem</button></a>
-                </div>
-                <audio controls autoplay loop>
-                  <source src="assets/ANDY_BUMUNTU_-_ON_FIRE__OFFICIAL_VIDEO_(256k).mp3" type="audio/mp3">
-                  Your browser does not support the audio element.
-                </audio>
-            </div>
+    <!-- Button Navigation -->
+    <div class="container text-center my-4">
+        <div class="btn-group">
+            <button class="btn" onclick="showSection('sports-day')">Sports Day</button>
+            <button class="btn" onclick="showSection('leavers-party')">Leavers Party</button>
+            <button class="btn" onclick="showSection('cultural-day')">Cultural Day</button>
+            <button class="btn" onclick="showSection('field-trips')">Field Trips</button>
         </div>
+    </div>
+     <!-- Gallery Sections -->
+     <div class="container">
+        <!-- Sports Day -->
+        <section id="sports-day" class="gallery-section">
+            <h2>Sports Day</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Sports Day 1" data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-6.jpg" alt="Sports Day 2" data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Sports Day 3" data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-6.jpg" alt="Sports Day 1" data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Sports Day 2" data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-6.jpg" alt="Sports Day 3" data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal">
+                </div>
+            </div>
+        </section>
+
+        <!-- Leavers Party -->
+        <section id="leavers-party" class="gallery-section">
+            <h2>leavers-party</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Leavers Party 1" data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Leavers Party 2" data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Leavers Party 3" data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Leavers Party 1" data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Leavers Party 2" data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Leavers Party 3" data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal">
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Day -->
+        <section id="cultural-day" class="gallery-section">
+            <h2>Cultural Day</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Cultural Day 1" data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Cultural Day 2" data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Cultural Day 3" data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Cultural Day 1" data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Cultural Day 2" data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Cultural Day 3" data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal">
+                </div>
+            </div>
+        </section>
+
+        <!-- Field Trips -->
+        <section id="field-trips" class="gallery-section">
+            <h2>Field Trips</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Field Trip 1" data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Field Trip 2" data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Field Trip 3" data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Field Trip 1" data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Field Trip 2" data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal">
+                </div>
+                <div class="col">
+                    <img src="assets/wallpaper-8.jpg" alt="Field Trip 3" data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal">
+                </div>
+            </div>
+        </section>
     </div>
     </div>
   </section>
+
+ <!-- Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="galleryModalLabel">Image Viewer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" class="img-fluid" src="assets/wallpaper-8.jpg" alt="Selected Image">
+                <img id="modalImage" class="img-fluid" src="assets/wallpaper-6.jpg" alt="Selected Image">
+                <img id="modalImage" class="img-fluid" src="assets/wallpaper-7.jpg" alt="Selected Image">
+                <img id="modalImage" class="img-fluid" src="assets/wallpaper-4.jpg" alt="Selected Image">
+            </div>
+        </div>
+    </div>
+</div>
   
 
 

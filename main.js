@@ -82,3 +82,28 @@ function downloadWork(fileName) {
     // Simulate download (replace with actual file link)
     window.location.href = `files/${fileName}`;
 }
+
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.gallery-section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+        if (section.id === sectionId) {
+            section.classList.add('active');
+        }
+    });
+}
+// Attach click event listener to images
+document.querySelectorAll('.gallery-section img').forEach(img => {
+    img.addEventListener('click', function () {
+        // Get the source of the clicked image
+        const src = this.src;
+
+        // Set the source of the modal image
+        const modalImage = document.getElementById('modalImage');
+        modalImage.src = src;
+
+        // Show the modal
+        const galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+        galleryModal.show();
+    });
+});

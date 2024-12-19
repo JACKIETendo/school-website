@@ -14,7 +14,7 @@
     <style>
           /* Section Header with Background Image */
         .section-header {
-            background: url('assets/wallpaper-1.jpg') no-repeat center center / cover;
+            background: url('assets/wallpaper-6.jpg') no-repeat center center / cover;
             padding: 100px 0;
             position: relative;
             margin-bottom: 20px;
@@ -81,7 +81,7 @@
         }
         }
         .background-overlay {
-          background: url('assets/wallpaper-7.jpg') no-repeat center center / cover;
+          background: url('assets/download (1).jpeg') no-repeat center center / cover;
           position: relative;
         }
         .background-overlay::before {
@@ -91,80 +91,62 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 128, 0, 0.7); /* Green overlay */
+            background: rgba(0, 128, 0, 0.6); /* Green overlay */
             z-index: 1;
         }
-        .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-    }
-
-    .whatsapp-icon img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .whatsapp-icon img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
-    </style>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
-            line-height: 1.6;
+        .page-title {
+            align-items: center;
+            color: green;
+            font-weight: bold;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 40px;
         }
-        h2, h4 {
+        .page-title h1{
             color: orange;
             font-weight: bold;
         }
-        .fees-table {
-            border: 1px solid #dee2e6;
-            background-color: #ffffff;
+
+        .prefect-card {
+            background-color: rgb(196, 202, 206);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
-        .fees-table th {
-            background-color: #f1f3f5;
+
+        .prefect-card img {
+            border-top-left-radius: 9px;
+            border-top-right-radius: 9px;
+        }
+
+        .prefect-card h5 {
+            color: green;
+            margin-top: 10px;
             font-weight: bold;
         }
-        .fees-table td, .fees-table th {
-            padding: 12px;
-            text-align: left;
+
+        .prefect-card p {
+            color: orange;
+            font-weight: bold;
         }
-        .fees-table tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
         }
-        .list-group-item {
-            background-color: #fff;
-            border: 1px solid #dee2e6;
-            padding: 10px 15px;
+
+        .whatsapp-icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .note {
-            font-size: 0.9rem;
-            color: #6c757d;
-            font-style: italic;
-        }
-        .payment-section{
-            justify-content: center;
-            align-items: center;
-        }
-        .payment-section ul {
-            margin-left: 1rem;
-        }
-        .payment-section ul li {
-            margin-bottom: 0.5rem;
-        }
-        .highlight {
-            background-color: #d1ecf1;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #bee5eb;
+
+        .whatsapp-icon img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
         /* Header */
         #topHeader {
@@ -232,6 +214,9 @@
             padding: 5px 10px;
         }
         }
+
+             
+
     </style>
 </head>
 <body>
@@ -341,134 +326,85 @@
   <section id="aboutUs" class="about-us">
     <div class="container-fluid">
       <div class="section-header">
-        <h2 class="section-title" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1000">School Fees</h2>
-      </div>
-      <div class="row align-items-center">
-        <div class=" col-12 col-md-6 align-items-center" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
-          <h3 style="color: orange; font-weight: bold; font-size: 40px;">OUR SCHOOL FEES STRUCTURE</h3>
-          <p style="line-height: 1.7; color: green; font-weight: bold;">AND ADDITIONAL REQUIREMENTS FOR NEW ENTRANTS</p>
-        </div>
-        <div class="row">
-            <div class="col-sm-6" data-aos="fade-down-left" data-aos-delay="200" data-aos-duration="1000">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: orange; font-weight: bold;">A. General Fees</h5>
-                    <table class="table fees-table">
-                        <thead>
-                            <tr>
-                                <th>Fee Type</th>
-                                <th>Amount (UGX)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Admission Fee</td><td>50,000/=</td></tr>
-                            <tr><td>Development Fee</td><td>100,000/=</td></tr>
-                            <tr><td>Library Contribution</td><td>50,000/=</td></tr>
-                            <tr><td>Brass Band</td><td>20,000/=</td></tr>
-                        </tbody>
-                    </table>        
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
-              <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: orange; font-weight: bold;">B. Tuition Fees</h5>
-                    <table class="table table-striped table-hover fees-table">
-                        <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Boarding (UGX)</th>
-                                <th>Day (UGX)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Nursery</td><td>1,057,000/=</td><td>667,000/=</td></tr>
-                            <tr><td>P.1 P.2 P.3 P.4 P.5</td><td>1,107,000/=</td><td>717,000/=</td></tr>
-                            <tr><td>P.6 and P.7</td><td>1,025,000/=</td><td>667,000/=</td></tr>
-                        </tbody>
-                    </table>
+        <h2 class="section-title" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1000">Prefects Body</h2>
+    </div>
+    <!-- Page Title -->
+    <div class="page-title">
+        <h1>Students' Leaders</h1>
+        <p>TFuture leaders are trained in schools, and at Shilo Nile Star Nursery & Primary School, we are committed to helping students develop their leadership skills through an inclusive, democratic approach</p>
+    </div>
+
+    <!-- Prefects Section -->
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="prefect-card text-center">
+                    <img src="assets/Joan N 20231030_140502.jpg" alt="Head Boy" class="img-fluid">
+                    <div class="p-3">
+                        <h5>John Doe</h5>
+                        <p>Head Boy</p>
+                        <p>Class P.7</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-        <div class="container">
-            <!-- Uniform Fees -->
-            <div class="mb-5" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
-                <h4>C. School Uniform Fees</h4>
-                <table class="table table-striped table-hover fees-table">
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Amount (UGX)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Labeling Fee (Uniforms Only)</td><td>17,000/=</td></tr>
-                        <tr><td>Dress (Nursery)</td><td>30,000/=</td></tr>
-                        <tr><td>Dress (Primary)</td><td>32,000/=</td></tr>
-                        <tr><td>Short</td><td>42,000/=</td></tr>
-                        <tr><td>T-shirt</td><td>25,000/=</td></tr>
-                        <tr><td>Sweater</td><td>40,000/=</td></tr>
-                        <tr><td>Special Sweater (Asthma)</td><td>60,000/=</td></tr>
-                        <tr><td>Sportswear (Short)</td><td>30,000/=</td></tr>
-                    </tbody>
-                </table>
-                <p class="note">* Boarding students must have two sets of uniforms.</p>
-            </div>
-    
-            <!-- Other Requirements -->
-            <div class="mb-5" style="justify-content: center;" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
-                <h4>D. Other Requirements</h4>
-                <ul class="list-group justify-content-center">
-                    <li class="list-group-item">Student ID and Photos: 8,000/=</li>
-                    <li class="list-group-item">Parents Visiting Card: 7,000/=</li>
-                    <li class="list-group-item">Ream of Papers (Don't carry papers): 30,000/=</li>
-                    <li class="list-group-item">Salon Service: 7,000/=</li>
-                    <li class="list-group-item">Bible: 40,000/=</li>
-                    <li class="list-group-item">Hymn Book: 17,000/=</li>
-                </ul>
-            </div>
-    
-            <!-- Payment Instructions -->
-            <div class=" container-fluid payment-section mb-5" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
-                <h4>F. How to Make Payments</h4>
-                <div class="highlight">
-                    <strong>Bank Payment:</strong>
-                    <ul>
-                        <li>Stanbic Bank A/C No: <strong>9030005844648</strong> (Nakasero Branch)</li>
-                        <li>Pay at any nearest Stanbic Bank branch or agent.</li>
-                        <li>Quote the Student's Name</li>
-                        <li>Pay Cash to the Bank Teller or Agent</li>
-                        <li>You will get a Payment Receipt confirming your fees payment (School Name, Student Name, School Fees Amount, Charges)</li>
-                        <li>Cash payments at school attract a risk fee of shs. 30,000=</li>
-                        <li>Money order or bank drafts drawn in the names of the school are acceptable</li>
-                        <li>Personal cheques are only acceptable upon the Headteacher’s permission</li>
-                    </ul>
-                </div>
-                <div class="highlight mt-3" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="1000">
-                    <strong>Mobile Money Payment:</strong>
-                    <ul>
-                        <li>MTN Momo: Dial <code>*165*4*3*2*1#</code></li>
-                        <li>Airtel Money: Dial <code>*185*6*2*1#</code></li>
-                        <li>Enter Student Code and Confirm Payment Details.</li>
-                        <li>Enter the Student Code. For example: 1003211569</li>
-                        <li>Enter the School Fees Amount to Pay to the School.</li>
-                        <li>Confirm Details of Payment displayed to you. (School name, Student name, School fees amount, charges).</li>
-                        <li>Continue to authorize transaction</li>
-                        <li>Enter your Mobile Money PIN.</li>
-                        <li>Approve Payment.</li>
-                        <li>You will Receive a Message with all your Payment Details.</li>
-                    </ul>
+            <div class="col-md-4">
+                <div class="prefect-card text-center">
+                    <img src="assets/Joan N 20231030_140502.jpg" alt="Head Girl" class="img-fluid">
+                    <div class="p-3">
+                        <h5>Jane Smith</h5>
+                        <p>Head Girl</p>
+                        <p>Class P.7</p>
+                    </div>
                 </div>
             </div>
-            <footer style="text-align: center; font-size: 0.85rem; color: green; font-weight: bold; margin-top: 30px; padding: 20px; background-color: #e9ecef;">* All fees are subject to change without notice. Contact the school for up-to-date information.</footer>  
+            <div class="col-md-4">
+                <div class="prefect-card text-center">
+                    <img src="assets/Joan N 20231030_140502.jpg" alt="Sports Prefect" class="img-fluid">
+                    <div class="p-3">
+                        <h5>Michael Brown</h5>
+                        <p>Sports Prefect</p>
+                        <p>Class P.6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="prefect-card text-center">
+                    <img src="assets/Joan N 20231030_140502.jpg" alt="Environment Prefect" class="img-fluid">
+                    <div class="p-3">
+                        <h5>Sarah Johnson</h5>
+                        <p>Environment Prefect</p>
+                        <p>Class P.5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="prefect-card text-center">
+                    <img src="assets/Joan N 20231030_140502.jpg" alt="Library Prefect" class="img-fluid">
+                    <div class="p-3">
+                        <h5>David Lee</h5>
+                        <p>Library Prefect</p>
+                        <p>Class P.6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="prefect-card text-center">
+                    <img src="assets/Joan N 20231030_140502.jpg" alt="Library Prefect" class="img-fluid">
+                    <div class="p-3">
+                        <h5>David Lee</h5>
+                        <p>Library Prefect</p>
+                        <p>Class P.6</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    </div>
   </section>
+  
 
 
-  <!-- Footer Section -->
+ <!-- Footer Section -->
 <footer class="text-white py-4" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(assets/wallpaper-1.jpg) no-repeat center center / cover;">
   <div class="container" style="line-height: 30px;">
       <div class="row align-items-center" >
